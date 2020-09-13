@@ -1,0 +1,8 @@
+{
+  "port": 80,
+  "portHttps": 443,
+  "jwtSecret": "atlantisproject1",
+  "secretCode": "P@ssw0rd00",
+  "mongoURL": "mongodb+srv://admin:P@ssw0rd00@atlantis-rydzc.mongodb.net/App?retryWrites=true&w=majority",
+  "baseUrl": "http://middleware.website"
+}

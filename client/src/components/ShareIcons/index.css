@@ -1,0 +1,14 @@
+.shareIcons-container {
+    margin: 15px 0;
+}
+.social-icons {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.social-icons .social-icon {
+    cursor: pointer;
+    filter: brightness(0.9);
+}

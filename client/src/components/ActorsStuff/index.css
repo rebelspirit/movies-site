@@ -1,0 +1,78 @@
+.actors-stuff-container {
+    margin: 15px 0;
+}
+.actors-stuff {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: flex-start;
+}
+.actor-stuff-item {
+    width: 100%;
+    min-width: 121px;
+    max-width: 121px;
+    margin: 5px;
+    cursor: pointer;
+}
+.actor-stuff-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    border-radius: .2rem;
+    filter: brightness(.95);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s;
+}
+.actor-stuff-item img:hover,
+.actor-stuff-item img:active {
+    filter: brightness(107%);
+    transform: scale(0.99)
+}
+.actor-stuff-item .actor-name {
+    margin: 5px 0;
+}
+.actor-stuff-item .actor-character {
+    font-size: .75rem;
+    font-style: italic;
+    margin: 5px 0;
+}
+/* width */
+.actors-stuff::-webkit-scrollbar {
+    background-color: unset;
+}
+/* Track */
+.actors-stuff::-webkit-scrollbar-track {
+    background-color: unset;
+}
+/* Handle */
+.actors-stuff::-webkit-scrollbar-thumb {
+    background-color: unset;
+}
+/* Handle on hover */
+.actors-stuff::-webkit-scrollbar-thumb:hover {
+    background-color: unset;
+}
+.actors-stuff::-webkit-scrollbar-button {
+    display:none;
+}
+@media screen and (max-width: 450px) {
+    .actors-stuff-container h6 {
+        font-size: 1.2rem;
+    }
+    .actors-stuff {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+    .actors-stuff::-webkit-scrollbar {
+        display: none;
+    }
+    .actor-stuff-item p {
+        margin: 10px 0;
+    }
+}

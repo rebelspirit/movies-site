@@ -1,0 +1,69 @@
+.account-container {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    width: 100%;
+    max-width: 300px;
+    background-color: rgba(27, 27, 27, 0.95);
+    border-left: 1px solid #323232;
+    border-right: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    z-index: 15;
+}
+.account-container .account-header {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #323232;
+}
+.account-header .account-avatar {
+    width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 11px;
+    margin: 3px 10px;
+    border-radius: 50%;
+    background: linear-gradient(70deg,#45cafc,#303f9f);
+}
+.account-header .account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fafafa;
+    font-size: 1.1rem;
+    font-family: "SF UI Display Light", sans-serif;
+    padding: 0 5px;
+}
+.account-header .account-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fafafa;
+    padding: 3px 5px;
+    font-size: 1.3rem;
+    cursor: pointer;;
+}
+.account-info .account-email {
+    font-size: .9rem;
+    color: #B0B0B0;
+}
+.account-container .navigation {
+    border-bottom: unset;
+}
+.button-container.disable-hover:hover {
+    background: unset !important;
+}
+@media screen and (max-width: 450px) {
+    .account-container {
+        background-color: rgba(27, 27, 27, 0.97);
+    }
+}

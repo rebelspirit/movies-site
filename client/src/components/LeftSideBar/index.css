@@ -1,0 +1,139 @@
+aside {
+    width: 100%;
+    max-width: 60px;
+    background-color: rgba(27, 27, 27, 0.98);
+    min-height: 700px;
+    height: 100%;
+    margin-top: 60px;
+    position: fixed;
+    z-index: 100;
+    overflow-y: scroll;
+    padding-bottom: 250px;
+}
+/* width */
+aside::-webkit-scrollbar {
+    width: 2px;
+}
+aside:hover::-webkit-scrollbar {
+    width: 2px;
+}
+aside:hover::-webkit-scrollbar-thumb {
+    background-color: #323232;
+}
+/* Track */
+aside::-webkit-scrollbar-track {
+    background-color: #141414;
+}
+/* Handle */
+aside::-webkit-scrollbar-thumb {
+    background-color: #141414;
+    border-radius: 16px;
+}
+aside::-webkit-scrollbar-button {
+    display:none;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    border-bottom: 1px solid #323232;
+}
+.item {
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    min-height: 40px;
+}
+.button-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.button-container .nav-icon-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    width: 100%;
+    max-width: 40px;
+    color: #B0B0B0;
+    padding: 10px 5px;
+    transition: all 0.4s ease;
+}
+.button-container .itemName {
+    width: 100%;
+}
+.button-container .itemName {
+    position: relative;
+    font-family: "SF UI Display Regular", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 40px;
+    padding: 10px 5px;
+    color: #B0B0B0;
+    text-decoration: none;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    transition: .15s;
+}
+.button-container .itemName .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    padding: 0 10px;
+}
+.button-container .itemName h5 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+.item .sublinks {
+    display: none;
+    background: #101010;
+}
+.item .sublinks .sublinks-item {
+    font-family: "SF UI Display Regular", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 40px;
+    padding: 10px 5px 10px 55px;
+    color: #B0B0B0;
+    text-decoration: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.item .sublinks .sublinks-item:hover {
+    color: #ffffff;
+    border-top: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+}
+.button-container:hover {
+    background: linear-gradient(40deg,rgba(50,50,50, .85),rgba(176, 176, 176, .1));
+}
+.button-container .itemName:hover {
+    color: #fafafa;
+}
+.button-container .nav-icon-right:hover {
+    color: #ffffff;
+}
+.item .sublinks-item-active {
+    display: block;
+}
+.arrow-rotate {
+    transform: rotate(180deg);
+}
+@media screen and (max-width: 450px) {
+    aside {
+        max-width: 0;
+    }
+}

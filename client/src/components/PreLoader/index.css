@@ -1,0 +1,10 @@
+#preLoader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #141414;
+    background-image: url(../../assets/img/Double-Ring-1.5s-130px.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}

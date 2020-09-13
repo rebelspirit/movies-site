@@ -1,0 +1,11 @@
+.CircularProgressbar {
+    position: absolute !important;
+    top: 275px;
+    right: 3%;
+    z-index: 10;
+    width: 50px !important;
+    height: 50px !important;
+}
+.CircularProgressbar .CircularProgressbar-text {
+    font-weight: bold;
+}

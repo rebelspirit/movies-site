@@ -1,0 +1,25 @@
+.admin-container .admin-btn {
+    width: 200px;
+    height: 35px;
+    font-family: "SF UI Display Regular", sans-serif;
+    font-size: 1.2rem;
+    color: #fafafa;
+    text-shadow: 1px 1px 0 #000;
+    border: unset;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 3px;
+    transition: .3s;
+}
+.admin-container .admin-btn.blue-btn {
+    background: linear-gradient(40deg,#45cafc,#303f9f);
+}
+.admin-container .admin-btn.blue-btn:hover {
+    background: linear-gradient(170deg,#45cafc,#303f9f);
+}
+.admin-container .admin-btn.aqua-btn {
+    background: linear-gradient(40deg,#2096ff,#05ffa3)
+}
+.admin-container .admin-btn.aqua-btn:hover {
+    background: linear-gradient(170deg,#2096ff,#05ffa3)
+}

@@ -1,0 +1,279 @@
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    max-height: 60px;
+    background: rgba(36, 36, 36, 0.95);
+    padding: 0 15px;
+    z-index: 100;
+}
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 170px;
+}
+.navigation-container:last-child {
+    justify-content: space-around;
+}
+.burger {
+    display: flex;
+    align-items: center;
+    max-width: 35px;
+    height: 24px;
+    padding: 5px;
+    cursor: pointer;
+}
+.burger button {
+    position: relative;
+    background: #ffffff;
+    height: 2px;
+    width: 23px;
+    padding: 0;
+    border: none;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    outline: none !important;
+}
+.burger button:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -6px;
+    width: inherit;
+    height: inherit;
+    background: #ffffff;
+    -webkit-transform-origin: 1.5px center;
+    -moz-transform-origin: 1.5px center;
+    -o-transform-origin: 1.5px center;
+    transform-origin: 1.5px center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.burger button:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: inherit;
+    height: inherit;
+    background: #ffffff;
+    -webkit-transform-origin: 1.5px center;
+    -moz-transform-origin: 1.5px center;
+    -o-transform-origin: 1.5px center;
+    transform-origin: 1.5px center;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.burger.open button {
+    background: 0 0;
+}
+.burger.open button:before {
+    top: 0;
+    -webkit-transform: rotate3d(0,0,1,-45deg);
+    -moz-transform: rotate3d(0,0,1,-45deg);
+    -o-transform: rotate3d(0,0,1,-45deg);
+    transform: rotate3d(0,0,1,-45deg);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.burger.open button:after {
+    bottom: 0;
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    -moz-transform: rotate3d(0,0,1,45deg);
+    -o-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.logo {
+    width: 100%;
+    max-width: 110px;
+    font-family: 'Lato-Black', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fafafa;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 5px 3px 5px;
+}
+.go {
+    font-weight: 900;
+    color: rgba(81, 253, 186, 1);
+    transition: .3s;
+}
+.film {
+    transition: .3s;
+}
+.io {
+    opacity: 0;
+    text-transform: lowercase;
+    font-size: 0;
+    transition: .3s;
+}
+.logo:hover .film {
+    margin-left: 2px;
+}
+.logo:hover .io {
+    opacity: 1;
+    font-size: 16px;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    padding: 0 3px;
+}
+.search-container .search-field {
+    display: flex;
+    border: 1px solid #343434;
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.search-container .search-field:focus-within {
+    border: 1px solid rgba(81, 253, 186, .55);
+}
+.search-container .search-field input {
+    width: 100%;
+    color: #B0B0B0;
+    background-color: rgba(37, 37, 37, 0.45);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    border: none;
+    outline: none;
+    line-height: 20px;
+    padding: 5px 10px;
+}
+.search-container .search-field button {
+    background-color: rgba(37, 37, 37, 0.45);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    border: none;
+    color: #B0B0B0;
+    padding: 5px 10px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.search-container .search-field button:hover {
+    color: #ffffff;
+}
+.search-container .search-history {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    max-width: 544px;
+    transform: translateX(-50%);
+    background-color: rgba(27, 27, 27, 0.97);
+    border-left: 1px solid #323232;
+    border-right: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+    transition: .3s;
+}
+.search-container .search-history-active {
+    display: block;
+}
+.search-history .search-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #B0B0B0;
+    font-size: .8rem;
+    padding: 7px;
+    border-bottom: 1px solid #323232;
+    cursor: pointer;
+}
+.search-history .search-item:hover {
+    color: #fafafa;
+}
+.search-history .search-item:last-child {
+    border-bottom: unset;
+}
+.search-item svg {
+    display: none;
+    transition: .3s;
+    /*opacity: .3;*/
+}
+.search-history .search-item:hover svg {
+    display: inline-block;
+    /*opacity: 1;*/
+}
+.movie-container,
+.notification-container,
+.signIn-container,
+.user-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 11px;
+    border-radius: 50%;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.user-container {
+    background: linear-gradient(40deg,#45cafc,#303f9f);
+}
+.notification-container {
+    padding: 10px 12px;
+}
+.movie-container:hover,
+.notification-container:hover,
+.signIn-container:hover {
+    background: linear-gradient(40deg,rgba(176, 176, 176, .2),rgba(176, 176, 176, .35));
+}
+.user-container:hover {
+    background: linear-gradient(70deg,#45cafc,#303f9f);
+}
+@media screen and (max-width: 450px) {
+    .logo {
+        display: none;
+    }
+    .navigation-container:first-child {
+        max-width: 43px;
+    }
+    .navigation-container:last-child {
+        max-width: 115px;
+    }
+    .movie-container,
+    .notification-container,
+    .signIn-container,
+    .user-container {
+        font-size: .9rem;
+        padding: 8px 9px;
+    }
+    .search-container .search-history {
+        width: 95.5%;
+        max-width: 255px;
+    }
+    .search-history .search-item {
+        font-size: .6rem;
+    }
+}
